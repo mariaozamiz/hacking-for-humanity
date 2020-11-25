@@ -1,30 +1,37 @@
 @import '../../app.scss';
 
 .header {
-    width: 100%;
-
-    &-title {
-        font-size: xl;
-    }
-    // &-logo {
-    //     display: flex;
-    // }
+  width: 100%;
+  color: white;
+  font-family: $font-basic;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: $color-primary;
+  height: 300px;
+  margin: auto;
+  border-radius: 0 0 85% 85% / 30%;
+  text-shadow: 1px 1px 1px #333;
+  background-color: rgb(0, 229, 255);
+  background-image: linear-gradient(120deg, $color-primary 50%, #485a5b6b 100%);
+  position: relative;
+  padding: 30px 0;
+  @mixin tablet {
+    flex-direction: row;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+  &-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  &-title {
+    font-size: xl;
+    margin: 30px 0;
+  }
 }
-
-// .logo {
-//     width: 326px;
-//     height: 116px;
-//     flex-shrink: 0;
-//     padding: 15px;
-//     margin: 0 auto;
-
-// @include tablet {
-//     width: 489px;
-//     height: 174px;
-// }
-
-// @include desktop {
-//     width: 652px;
-//     height: 232px;
-// }
-// }
