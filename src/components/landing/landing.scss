@@ -1,0 +1,51 @@
+@import '../../app.scss';
+
+.landing {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+  font-family: $font-basic;
+  &__header {
+    margin: 50px;
+    text-align: center;
+    max-width: 1200px;
+  }
+  &__title {
+    width: 30rem;
+    &-img {
+      width: 100%;
+    }
+  }
+  &__p {
+    color: #26c7a4;
+    font-size: 1.8rem;
+    margin: 20px;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    margin: auto;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #de3d6f;
+    &:hover {
+      background-color: #3a3b74;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .landing {
+    // background-image: url('../images/o2iEmS\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
