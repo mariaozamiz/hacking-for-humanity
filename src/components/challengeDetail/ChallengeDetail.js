@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import './challengeDetail.scss';
 
 function ChallengeDetail({ challenge }) {
+    const saveChallenge = (ev) => {
+        ev.preventDefault();
+    };
+
     return (
-        <div className="modal">
-            <Link className="button__wrapp" to="/">
+        <div className={`modal ${challenge.type}`}>
+            <Link className="button__wrapp" to="/App">
                 <button className="button__close">X</button>
             </Link>
             <div className="modal__content wrapper">
@@ -21,7 +25,12 @@ function ChallengeDetail({ challenge }) {
                     <p className="modal__description">
                         {challenge.description}
                     </p>
-                    <span className="modal__type">{challenge.type}</span>
+                    <button
+                        onClick={saveChallenge}
+                        className="modal__button--accept"
+                    >
+                        Acepto el reto
+                    </button>
                 </div>
             </div>
         </div>
