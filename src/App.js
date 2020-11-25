@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
 import ChallengesList from './components/challengesList/ChallengesList';
-import DayChallenge from './components/dayChallenge/DayChallenge';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
 import airtableApi from './services/airtableClient';
 
@@ -19,7 +18,6 @@ function App() {
 
     const renderChallengeDetail = (props) => {
         const challengeId = props.match.params.id;
-        console.log(challenges);
         const foundChallenge = challenges.find((challenge) => {
             return challenge.id === challengeId;
         });
@@ -33,8 +31,6 @@ function App() {
             <Route exact path="/">
                 <Header />
                 <main className="main">
-                    <h2>Reto del día</h2>
-                    <DayChallenge />
                     <h2>Retos por categoría</h2>
                     <ChallengesList challenges={challenges} />
                 </main>
