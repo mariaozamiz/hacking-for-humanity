@@ -19,7 +19,7 @@ function App() {
     const renderChallengeDetail = (props) => {
         const challengeId = props.match.params.id;
         const foundChallenge = challenges.find((challenge) => {
-            return challenge.id === parseInt(challengeId);
+            return challenge.id === challengeId;
         });
         if (foundChallenge !== undefined) {
             return <ChallengeDetail challenge={foundChallenge} />;
@@ -28,18 +28,20 @@ function App() {
 
     return (
         <div className="App">
-            <Header />
-            <main className="main">
-                <h2>Retos por categoría</h2>
-                <ChallengesList challenges={challenges} />
-                <Switch>
-                    <Route
-                        exact
-                        path="/challenges/:id"
-                        render={renderChallengeDetail}
-                    />
-                </Switch>
-            </main>
+            <Route exact path="/">
+                <Header />
+                <main className="main">
+                    <h2>Retos por categoría</h2>
+                    <ChallengesList challenges={challenges} />
+                </main>
+            </Route>
+            <Switch>
+                <Route
+                    exact
+                    path="/challenge/:id"
+                    render={renderChallengeDetail}
+                />
+            </Switch>
         </div>
     );
 }
