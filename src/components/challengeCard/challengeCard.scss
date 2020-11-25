@@ -1,50 +1,51 @@
 @import '../../app.scss';
 
 .challenge-card {
-    border: 1px solid $color-dark;
-    border-radius: 5px;
-    background-color: $color-primary;
-    box-shadow: $shadow-card;
+  border: 1px solid $color-dark;
+  border-radius: 5px;
+  background-color: $color-primary;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 10px;
+  width: 100px;
+
+  @include tablet {
+    width: 200px;
+  }
+
+  &__image {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    margin: 10px 10px;
-    width: 100px;
+    text-align: center;
+    align-content: center;
+  }
+
+  &__name {
+    font-family: $font-basic;
+    color: $color-light;
+    font-size: $m;
 
     @include tablet {
-        width: 200px;
+      font-size: $xl;
     }
+  }
 
-    &__image {
-        width: 100%;
-        flex-shrink: 0;
+  &__species {
+    font-family: $font-emphatic;
+    color: $color-tertiary;
+    font-size: $xs;
+    margin-top: 0px;
+
+    @include tablet {
+      font-size: $m;
     }
-
-    &__info {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-content: center;
-    }
-
-    &__name {
-        font-family: $font-basic;
-        color: $color-light;
-        font-size: $m;
-
-        @include tablet {
-            font-size: $xl;
-        }
-    }
-
-    &__species {
-        font-family: $font-emphatic;
-        color: $color-tertiary;
-        font-size: $xs;
-        margin-top: 0px;
-
-        @include tablet {
-            font-size: $m;
-        }
-    }
+  }
 }
