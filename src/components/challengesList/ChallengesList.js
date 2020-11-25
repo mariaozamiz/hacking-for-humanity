@@ -7,7 +7,7 @@ function ChallengesList({ challenges }) {
     console.log(challenges);
     const challengesInfo = challenges.map((challenge) => {
         return (
-            <li key={challenge.id} className="challenge-card">
+            <li key={challenge.id} className={`challenge-card ${challenge.type}`}>
                 <ChallengeCard
                     id={challenge.id}
                     type={challenge.type}
