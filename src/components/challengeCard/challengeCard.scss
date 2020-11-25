@@ -6,7 +6,6 @@
   height: 200px;
   border: 1px solid $color-dark;
   border-radius: 5px;
-  background-color: $color-primary;
   box-shadow: $shadow-card;
   display: flex;
   flex-direction: column;
@@ -54,4 +53,14 @@
       margin-top: 50px;
     }
   }
+}
+
+.auto-care {
+  background-color: $color-primary;
+}
+.social {
+  background-color: $color-secondary;
+}
+.home {
+  background-color: $color-cuaternary;
 }
