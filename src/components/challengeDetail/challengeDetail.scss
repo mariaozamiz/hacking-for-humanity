@@ -1,30 +1,10 @@
 @import '../../app.scss';
-.modal__overlay {
-    width: 100vw;
+
+.modal {
+    width: 100%;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #cccc;
-}
-
-.modal__dialog {
-    //position
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    //style
-    width: 70vw;
-    max-width: 70%;
-    border: 0.5px solid $color-secondary;
-    border-radius: 5px;
-    background-color: $color-light;
-    box-shadow: $shadow-modal;
-    display: flex;
-    flex-direction: column;
+    background-color: #bfbcba;
+    color: white;
     padding: 5px;
 
     @include tablet {
@@ -33,52 +13,68 @@
     }
 }
 
-.modal__button-close {
-    width: 30px;
-    height: 30px;
+.button__wrapp {
+    display: flex;
+    align-content: left;
+    text-decoration: none;
+    flex-direction: row-reverse;
 }
+
+.button__close {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: none;
+    margin-top: 12px;
+    text-decoration: none;
+    font-weight: $medium;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+}
+
+.wrapper {
+    margin: 70px 50px;
+}
+
 .modal__content {
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    @include tablet {
-        flex-direction: row;
-    }
 
     &-image {
-        @include tablet {
-            transform: scale(0.9);
+        text-align: center;
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 10px;
+
+        & img {
+            width: 100%;
+            display: block;
         }
     }
 
-    &-list {
+    &-info {
         padding-left: 20px;
         font-family: $font-basic;
-        color: $color-medium;
+        color: white;
         font-weight: $regular;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
     }
 }
 
-.modal__list-name {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: $bold;
-    color: $color-primary;
-    font-size: 30px;
-    margin-bottom: 10px;
+.modal__title {
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
 }
 
-.modal__button {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+.modal__description {
+    font-weight: $regular;
+    color: white;
 }
 
-.modal__button-close {
-    width: 20px;
-    height: 20px;
+.modal__type {
+    margin: auto;
 }
