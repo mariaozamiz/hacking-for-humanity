@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
-import CategoriesList from './components/categoriesList/CategoriesList';
-import DayChallenge from './components/dayChallenge/DayChallenge';
+import ChallengesList from './components/challengesList/ChallengesList';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
 import airtableApi from './services/airtableClient';
 
@@ -20,7 +19,7 @@ function App() {
     const renderChallengeDetail = (props) => {
         const challengeId = props.match.params.id;
         const foundChallenge = challenges.find((challenge) => {
-            return challenge.id === parseInt(challengeId);
+            return challenge.id === challengeId;
         });
         if (foundChallenge !== undefined) {
             return <ChallengeDetail challenge={foundChallenge} />;
@@ -29,20 +28,20 @@ function App() {
 
     return (
         <div className="App">
-            <Header />
-            <main className="main">
-                <h2>Reto del día</h2>
-                <DayChallenge />
-                <h2>Retos por categoría</h2>
-                <CategoriesList challenges={challenges} />
-                <Switch>
-                    <Route
-                        exact
-                        path="/challenges/:id"
-                        render={renderChallengeDetail}
-                    />
-                </Switch>
-            </main>
+            <Route exact path="/">
+                <Header />
+                <main className="main">
+                    <h2>Retos por categoría</h2>
+                    <ChallengesList challenges={challenges} />
+                </main>
+            </Route>
+            <Switch>
+                <Route
+                    exact
+                    path="/challenge/:id"
+                    render={renderChallengeDetail}
+                />
+            </Switch>
         </div>
     );
 }
