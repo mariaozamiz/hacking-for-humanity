@@ -1,7 +1,8 @@
 import React from 'react';
+
 import ChallengeCard from '../challengeCard/ChallengeCard';
 import './challengesList.scss';
-import lieManChair from '../../assets/icons/lie_man_chair.svg';
+//import lieManChair from '../../assets/icons/lie_man_chair.svg';
 
 function ChallengesList({ challenges }) {
     console.log(challenges);

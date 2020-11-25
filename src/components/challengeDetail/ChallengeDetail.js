@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './challengeDetail.scss';
 
-function ChallengeDetail() {
+function ChallengeDetail({ challenge }) {
     return (
         <div className="modal">
             <Link className="button__wrapp" to="/">
@@ -12,19 +12,16 @@ function ChallengeDetail() {
                 <div className="modal__content-image">
                     <img
                         className="image"
-                        src="https://cocomaterial.com/media/lie_man_chair.svg"
-                        alt=""
-                        // src={challenge.image}
-                        // alt={`${challenge.name}´s pic`}
+                        src={challenge.image}
+                        alt={`${challenge.name}´s pic`}
                     ></img>
                 </div>
                 <div className="modal__content-info">
-                    <h1 className="modal__title">Medita</h1>
+                    <h1 className="modal__title">{challenge.name}</h1>
                     <p className="modal__description">
-                        Tómate 10 minutos para meditar y sentir agradecimiento
-                        por todo lo que eres y tienes.
+                        {challenge.description}
                     </p>
-                    <span className="modal__type">Autocuidado</span>
+                    <span className="modal__type">{challenge.type}</span>
                 </div>
             </div>
         </div>
