@@ -1,0 +1,30 @@
+@import '../../app.scss';
+
+.header {
+    width: 100%;
+
+    &-title {
+        font-size: xl;
+    }
+    // &-logo {
+    //     display: flex;
+    // }
+}
+
+// .logo {
+//     width: 326px;
+//     height: 116px;
+//     flex-shrink: 0;
+//     padding: 15px;
+//     margin: 0 auto;
+
+// @include tablet {
+//     width: 489px;
+//     height: 174px;
+// }
+
+// @include desktop {
+//     width: 652px;
+//     height: 232px;
+// }
+// }

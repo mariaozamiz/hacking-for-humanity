@@ -1,0 +1,43 @@
+@mixin tablet {
+    @media all and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media all and (min-width: $desktop) {
+        @content;
+    }
+}
+
+// /* COLORS */
+$color-primary: #3a3b74; //azul títulos y botones
+$color-secondary: #de3d6f; //rosa burbujas
+$color-tertiary: #fed0b8; //rosa claro para algunos fondos de secciones
+$color-light: #ffffff;
+$color-medium: #858282;
+$color-dark: #444444; //negro de los párrafos
+
+// /* SHADOWS */
+$shadow-card: 2px 2px 5px 7px $color-secondary;
+$shadow-modal: 2px 2px 5px 10px $color-secondary;
+
+/* FONTS */
+$font-basic: Roboto, Arial, sans-serif;
+$font-emphatic: 'Roboto Slab', serif;
+
+// /* FONT WEIGHT */
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+/* FONT SIZE */
+$xs: 0.875rem;
+$s: 1rem;
+$m: 1.125rem;
+$l: 1.25rem;
+$xl: 1.5rem;
+
+/* BREAKPOINTS */
+$tablet: 768px;
+$desktop: 1200px;

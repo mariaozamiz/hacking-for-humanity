@@ -1,0 +1,21 @@
+@import '../../app.scss';
+
+.challange-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+}
+
+.not-found__message {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: $font-basic;
+    font-size: $m;
+    color: $color-dark;
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "type": "auto-care",
+    "image": "https://cocomaterial.com/media/lie_man_chair.svg",
+    "name": "Medita",
+    "description": "Tómate 10 minutos para meditar y sentir agradecimiento por todo lo que eres y tienes."
+  },
+  {
+    "id": 2,
+    "type": "auto-care",
+    "image": "https://cocomaterial.com/media/lie_man_chair.svg",
+    "name": "Medita",
+    "description": "Tómate 10 minutos para meditar y sentir agradecimiento por todo lo que eres y tienes."
+  },
+  {
+    "id": 3,
+    "type": "auto-care",
+    "image": "https://cocomaterial.com/media/lie_man_chair.svg",
+    "name": "Medita",
+    "description": "Tómate 10 minutos para meditar y sentir agradecimiento por todo lo que eres y tienes."
+  },
+  {
+    "id": 4,
+    "type": "auto-care",
+    "image": "https://cocomaterial.com/media/lie_man_chair.svg",
+    "name": "Medita",
+    "description": "Tómate 10 minutos para meditar y sentir agradecimiento por todo lo que eres y tienes."
+  },
+  {
+    "id": 5,
+    "type": "auto-care",
+    "image": "https://cocomaterial.com/media/lie_man_chair.svg",
+    "name": "Medita",
+    "description": "Tómate 10 minutos para meditar y sentir agradecimiento por todo lo que eres y tienes."
+  },
+  {
+    "id": 6,
+    "type": "auto-care",
+    "image": "https://cocomaterial.com/media/lie_man_chair.svg",
+    "name": "Medita",
+    "description": "Tómate 10 minutos para meditar y sentir agradecimiento por todo lo que eres y tienes."
+  }
+]

@@ -1,1 +1,4 @@
-# hacking-for-humanity
+# Hacking for Humanity project
+
+
+
