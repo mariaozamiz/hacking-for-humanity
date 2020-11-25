@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
 import ChallengesList from './components/challengesList/ChallengesList';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
-import allChallenges from './services/allChallenges';
+import airtableApi from './services/airtableClient';
 
 import './app.scss';
 
@@ -11,8 +11,9 @@ function App() {
     const [challenges, setChallenges] = useState([]);
 
     useEffect(() => {
-        console.log(allChallenges);
-        setChallenges(allChallenges);
+        airtableApi().then((data) => {
+            setChallenges(data);
+        });
     }, []);
 
     const renderChallengeDetail = (props) => {
