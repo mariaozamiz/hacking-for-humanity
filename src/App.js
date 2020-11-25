@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
-import CategoriesList from './components/categoriesList/CategoriesList';
-import DayChallenge from './components/dayChallenge/DayChallenge';
+import ChallengesList from './components/challengesList/ChallengesList';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
 import allChallenges from './services/allChallenges';
 
@@ -30,10 +29,8 @@ function App() {
         <div className="App">
             <Header />
             <main className="main">
-                <h2>Reto del día</h2>
-                <DayChallenge />
                 <h2>Retos por categoría</h2>
-                <CategoriesList challenges={challenges} />
+                <ChallengesList challenges={challenges} />
                 <Switch>
                     <Route
                         exact

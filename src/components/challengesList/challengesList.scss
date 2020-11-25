@@ -1,21 +1,19 @@
 @import '../../app.scss';
 
 .challange-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
-    justify-content: center;
-}
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
 
-.not-found__message {
-    display: flex;
-    justify-content: center;
-}
-
-p {
-    font-family: $font-basic;
-    font-size: $m;
-    color: $color-dark;
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 30px;
+  }
 }

@@ -17,7 +17,7 @@ function ChallengeCard(props) {
                 ></img>
                 <div className="challenge-card__info">
                     <h1 className="challenge-card__name">{props.name}</h1>
-                    <h2 className="challenge-card__species">{props.species}</h2>
+                    
                 </div>
             </Link>
         </>
