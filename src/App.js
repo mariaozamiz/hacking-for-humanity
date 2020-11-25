@@ -34,7 +34,7 @@ function App() {
       <Route exact path="/App">
         <Header />
         <main className="main">
-          <h2>Retos por categoría</h2>
+        
           <ChallengesList challenges={challenges} />
         </main>
       </Route>

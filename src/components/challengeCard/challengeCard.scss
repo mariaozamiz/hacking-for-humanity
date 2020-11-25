@@ -2,7 +2,7 @@
 
 .challenge-card {
   min-width: 100px;
-  width: 140px;
+  width: 130px;
   height: 200px;
   border: 1px solid $color-dark;
   border-radius: 5px;
@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 10px;
+  margin: 10px 5px;
   transition: all ease 0.3s;
 
   &:hover {
@@ -62,7 +62,7 @@
 }
 
 .auto-care {
-  background-color: $color-primary;
+  background-color: $color-quintanary;
 }
 .social {
   background-color: $color-secondary;
