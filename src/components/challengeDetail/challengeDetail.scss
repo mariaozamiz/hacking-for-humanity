@@ -71,6 +71,8 @@
 
 .modal__title {
     font-family: $font-emphatic;
+    display: flex;
+    justify-content: space-evenly;
     margin-top: 20px;
     font-weight: $bold;
     font-size: $xl;
