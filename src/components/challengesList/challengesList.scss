@@ -1,6 +1,7 @@
 @import '../../app.scss';
 
 .challenge-list {
+  max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 20px;
