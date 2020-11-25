@@ -2,12 +2,13 @@
 $color-primary: #3a3b74; //azul títulos y botones
 $color-secondary: #de3d6f; //rosa burbujas
 $color-tertiary: #fed0b8; //rosa claro para algunos fondos de secciones
+$color-cuaternary: #26c7a4;
 $color-light: #ffffff;
 $color-medium: #858282;
 $color-dark: #444444; //negro de los párrafos
 
 // /* SHADOWS */
-$shadow-card: 2px 2px 5px 7px $color-secondary;
+$shadow-card: 2px 2px 5px 7px $color-dark;
 $shadow-modal: 2px 2px 5px 10px $color-secondary;
 
 /* FONTS */
