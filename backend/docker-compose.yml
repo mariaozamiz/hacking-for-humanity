@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  api:
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    build: .
+    image: headsrooms/girlsintech:latest
+    ports:
+      - 80:80
+    command: /usr/local/poetry/bin/poetry run uvicorn historedge_backend.api.app:app --reload --workers $API_WORKERS --port 80 --host 0.0.0.0

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "girlsintech2020"
+version = "0.1.0"
+description = "Hackathon project for Girls In Tech 2020"
+authors = ["Pablo Cabezas <headsrooms@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+airtable-python-wrapper = "^0.15.1"
+uvicorn = "^0.12.3"
+starlette = "^0.14.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
