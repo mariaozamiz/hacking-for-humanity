@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import ChallengesList from './components/challengesList/ChallengesList';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
 import airtableApi from './services/airtableClient';
+import getCovidImpact from './services/geolocation'
 
 import './app.scss';
 
@@ -13,6 +14,9 @@ function App() {
     useEffect(() => {
         airtableApi().then((data) => {
             setChallenges(data);
+        });
+        getCovidImpact().then((data) => {
+            console.log('Incidencia acumulada 14 días:', data.ia14d)
         });
     }, []);
 
