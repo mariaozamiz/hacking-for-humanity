@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ShareTwitter from '../shareTwitter/ShareTwitter';
 import './challengeDetail.scss';
 
 function ChallengeDetail({ challenge, handleAcceptedChallenges, acceptedChallenges }) {
+    
     const handleAccepted = (ev) => {
         handleAcceptedChallenges (ev.target.dataset.id);
     };
 
+   
     return (
         <div className={`modal ${challenge.type}`}>
             <Link className="button__wrapp" to="/App">
@@ -33,12 +36,7 @@ function ChallengeDetail({ challenge, handleAcceptedChallenges, acceptedChalleng
                          >Acepto el reto
                         </button>
                     </Link>
-                    <section className="share_twitter" hidden={acceptedChallenges.find((chall)=>chall.id === challenge.id) ? false : true}>
-                        <p className="share_twitter-text">
-                        Comparte en Twitter lo bien que lo estás haciendo!
-                        </p>
-                        <a className="share_twitter-btn" href="http://twitter.com/share?text=Estoy realizando este reto en Divoc Challenges, te apuntas al cambio?&hashtags=divocmola,consolemio&user_mentions=GirlsinTechEs" target="_blank">Compartir en twitter</a>
-                    </section>
+                    {acceptedChallenges.find((chall)=>chall.id === challenge.id) ? <ShareTwitter /> : ''}
                 </div>
             </div>
         </div>
