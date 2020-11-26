@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import ChallengesList from './components/challengesList/ChallengesList';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
 import airtableApi from './services/airtableClient';
+import getCovidImpact from './services/geolocation';
 import Landing from './components/landing/Landing';
 import './app.scss';
 import AcceptedChallenges from './components/acceptedChallenges/AcceptedChallenges';
