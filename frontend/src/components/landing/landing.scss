@@ -24,6 +24,7 @@
     font-size: 1.8rem;
     margin: 20px;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px black;
   }
   &__btn {
     width: 20px;
@@ -61,48 +62,57 @@
 .outdoor {
   width: 100%;
   height: 100%;
-  animation: pulse 5s infinite;
+  animation: outdoor 6s infinite;
   height: 100vh;
 }
 
-@keyframes pulse {
+@keyframes outdoor {
   0% {
     background-color: white;
   }
-  100% {
+  50% {
     background-color: $color-tertiary;
+  }
+  100% {
+    background-color: white;
   }
 }
 
 .beCareful {
   width: 100%;
   height: 100%;
-  animation: pulse 5s infinite;
+  animation: beCareful 6s infinite;
   height: 100vh;
 }
 
-@keyframes pulse {
+@keyframes beCareful {
   0% {
     background-color: white;
   }
+  50% {
+    background-color: #a879fa;
+  }
   100% {
-    background-color: $color-secondary;
+    background-color: white;
   }
 }
 
 .indoor {
   width: 100%;
   height: 100%;
-  animation: pulse 5s infinite;
+  animation: indoor 6s infinite;
   height: 100vh;
 }
 
-@keyframes pulse {
+@keyframes indoor {
   0% {
     background-color: white;
   }
+  50% {
+    background-color: $color-secondary;
+  }
   100% {
-    background-color: $color-quintanary;
+    background-color: white;
   }
 }
 
@@ -131,4 +141,17 @@
       outline: 0;
     }
   }
+}
+
+.status {
+  font-size: 0.8rem;
+  color: #3a3b74;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+.hidden {
+  display: none;
 }
