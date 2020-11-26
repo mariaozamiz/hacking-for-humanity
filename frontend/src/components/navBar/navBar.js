@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navBar.scss';
 
 function NavBar() {
@@ -6,14 +7,14 @@ function NavBar() {
     <nav className="nav-bar">
       <ul className="nav-menu">
         <li className="nav-menu__item">
-          <a className="nav-menu__link" href="./">
-            RETOS
-          </a>
+          <Link className="nav-menu__link" to="/App">
+            TODOS
+          </Link>
         </li>
         <li className="nav-menu__item">
-          <a className="nav-menu__link" href="./">
-            FAVORITOS
-          </a>
+          <Link className="nav-menu__link" to="/AcceptedChallenges">
+            ACEPTADOS
+          </Link>
         </li>
       </ul>
     </nav>

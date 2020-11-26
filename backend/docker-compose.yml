@@ -5,8 +5,21 @@ services:
       - ./:/app
     env_file:
       - .env
-    build: .
+    build: backend
     image: headsrooms/girlsintech:latest
+    networks:
+      - nginx_network
+    command: /usr/local/poetry/bin/poetry run uvicorn api.app:app --port 8000 --host 0.0.0.0 --env-file .env
+  nginx:
+    image: nginx:latest
     ports:
-      - 80:80
-    command: /usr/local/poetry/bin/poetry run uvicorn historedge_backend.api.app:app --reload --workers $API_WORKERS --port 80 --host 0.0.0.0
+      - 8000:80
+    volumes:
+      - ./config/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - api
+    networks:
+      - nginx_network
+networks:
+  nginx_network:
+    driver: bridge

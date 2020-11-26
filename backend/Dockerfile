@@ -10,7 +10,7 @@ ENV POETRY_VIRTUALENVS_CREATE=false \
 
 USER root
 
-COPY . /app
+COPY backend /app
 WORKDIR /app
 
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y -qq install curl build-essential git
