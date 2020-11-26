@@ -32,7 +32,13 @@ function App() {
           }
         } else if (data.fatality) {
           console.log('Tasa de mortalidad:', data.fatality);
-          // Aplicar estilos segun mortalidad
+          if (data.fatality < 0.01) {
+            setCovidLevel(0)
+          } else if (data.fatality < 0.04) {
+            setCovidLevel(1)
+          } else {
+            setCovidLevel(2)
+          }
         }
       })
       .catch((error) => {
