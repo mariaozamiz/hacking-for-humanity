@@ -26,7 +26,7 @@ console.log(handleAcceptedChallenges);
                     <p className="modal__description">
                         {challenge.description}
                     </p>
-                    <Link to="/App">
+                    <Link className="btn__container" to="/App">
                         <button
                             onClick={handleAccepted}
                             className="modal__button--accept"
