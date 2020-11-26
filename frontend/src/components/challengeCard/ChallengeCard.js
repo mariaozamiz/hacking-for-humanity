@@ -17,7 +17,7 @@ function ChallengeCard(props) {
                     loading="eager"
                      />
                 </div>
-                <h3 className="challenge-card__title">{props.name}</h3>   
+                <h2 className="challenge-card__title">{props.name}</h2>   
             </li>
         </Link>
     );
