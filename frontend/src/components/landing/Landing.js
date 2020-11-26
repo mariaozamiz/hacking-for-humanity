@@ -5,7 +5,7 @@ import './landing.scss';
 
 const Landing = () => {
   return (
-    <section className="landing indoor">
+    <section className="landing outdoor">
       <header className="landing__header">
         <div className="landing__title">
           {/* <img
