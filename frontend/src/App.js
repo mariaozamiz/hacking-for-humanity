@@ -11,6 +11,7 @@ import AcceptedChallenges from './components/acceptedChallenges/AcceptedChalleng
 function App() {
   const [challenges, setChallenges] = useState([]);
   const [acceptedChallenges, setAcceptedChallenges] = useState([]);
+  const [landing, setLanding] = useState('');
 
   useEffect(() => {
     airtableApi().then((data) => {
@@ -18,11 +19,15 @@ function App() {
     });
   }, []);
 
+  // useEffect(() => {
+  //   getGeolocation().then((data) => {
+  //     setLanding(data);
+  //   });
+  // }, []);
 
   const handleAcceptedChallenges = (data) => {
-    setAcceptedChallenges([...data])
+    setAcceptedChallenges([...data]);
   };
-
 
   const renderChallengeDetail = (props) => {
     const challengeId = props.match.params.id;
@@ -30,7 +35,12 @@ function App() {
       return challenge.id === challengeId;
     });
     if (foundChallenge !== undefined) {
-      return <ChallengeDetail challenge={foundChallenge} handleAcceptedChallenges={handleAcceptedChallenges}/>;
+      return (
+        <ChallengeDetail
+          challenge={foundChallenge}
+          handleAcceptedChallenges={handleAcceptedChallenges}
+        />
+      );
     }
   };
 
