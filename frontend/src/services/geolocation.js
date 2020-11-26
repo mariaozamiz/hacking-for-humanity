@@ -19,10 +19,11 @@ const geolocationSuccess = (resolve, reject) => {
                     fetch('https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_ia14d.csv')
                         .then((response) => response.text())
                         .then((text) => {
-                            const statePos = text.lastIndexOf(location.state)
+                            const stateName = getStateName(location.state_code)
+                            const statePos = text.lastIndexOf(stateName)
                             // Get ia14d from dataset
                             let stateInfo = text.substring(statePos)
-                            let regexp = `${location.state},(\\d+.\\d*)`
+                            let regexp = `${stateName},(\\d+.\\d*)`
                             //console.log(regexp)
                             let re = new RegExp(regexp, "g")
                             let results = re.exec(stateInfo)
@@ -51,9 +52,54 @@ const geolocationSuccess = (resolve, reject) => {
                                 })
                                 .catch(reject)
                         })
-            }
-    })
-            .catch (reject)
+                }
+            })
+            .catch(reject)
+    }
+}
+
+const getStateName = (stateCode) => {
+    switch (stateCode) {
+        case 'EX':
+            return 'Extremadura'
+        case 'CN':
+            return 'Canarias'
+        case 'CL':
+            return 'Castilla y León'
+        case 'AS':
+            return 'Asturias'
+        case 'PV':
+            return 'País Vasco'
+        case 'RI':
+            return 'La Rioja'
+        case 'ML':
+            return 'Melilla'
+        case 'CE':
+            return 'Ceuta'
+        case 'CB':
+            return 'Cantabria'
+        case 'AR':
+            return 'Aragón'
+        case 'AN':
+            return 'Andalucía'
+        case 'MC':
+            return 'Murcia'
+        case 'CM':
+            return 'Castilla La Mancha'
+        case 'NC':
+            return 'Navarra'
+        case 'CT':
+            return 'Cataluña'
+        case 'VC':
+            return 'C. Valenciana'
+        case 'GA':
+            return 'Galicia'
+        case 'MD':
+            return 'Madrid'
+        case 'IB':
+            return 'Baleares'
+        default:
+            return 'España'
     }
 }
 

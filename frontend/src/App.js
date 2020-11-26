@@ -13,6 +13,7 @@ import Footer from './components/footer/Footer';
 function App() {
   const [challenges, setChallenges] = useState([]);
   const [acceptedChallenges, setAcceptedChallenges] = useState([]);
+  const [covidLevel, setCovidLevel] = useState([]);
 
   useEffect(() => {
     airtableApi().then((data) => {
@@ -22,7 +23,13 @@ function App() {
       .then((data) => {
         if (data.ia14d) {
           console.log('Incidencia acumulada 14 días:', data.ia14d);
-          // Aplicar estilos segun incidencia
+          if (data.ia14d < 200) {
+            setCovidLevel(0)
+          } else if (data.ia14d < 400) {
+            setCovidLevel(1)
+          } else {
+            setCovidLevel(2)
+          }
         } else if (data.fatality) {
           console.log('Tasa de mortalidad:', data.fatality);
           // Aplicar estilos segun mortalidad
@@ -60,7 +67,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        <Landing />
+        <Landing level={covidLevel} />
       </Route>
       <Route exact path="/App">
         <Header />
