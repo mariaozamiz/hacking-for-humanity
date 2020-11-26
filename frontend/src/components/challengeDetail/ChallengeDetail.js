@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ShareTwitter from '../shareTwitter/ShareTwitter';
 import './challengeDetail.scss';
 
 function ChallengeDetail({ challenge, handleAcceptedChallenges, acceptedChallenges }) {
+    
     const handleAccepted = (ev) => {
         handleAcceptedChallenges (ev.target.dataset.id);
     };
 
+   
     return (
         <div className={`modal ${challenge.type}`}>
             <Link className="button__wrapp" to="/App">
@@ -33,6 +36,7 @@ function ChallengeDetail({ challenge, handleAcceptedChallenges, acceptedChalleng
                          >Acepto el reto
                         </button>
                     </Link>
+                    {acceptedChallenges.find((chall)=>chall.id === challenge.id) ? <ShareTwitter /> : ''}
                 </div>
             </div>
         </div>
