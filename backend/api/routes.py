@@ -1,7 +1,7 @@
 from starlette.routing import Route
 
-from api import subscribe_to_challenge, complete_challenge, get_challenges
-from api import create_user, get_me
+from api.endpoints.challenges import subscribe_to_challenge, complete_challenge, get_challenges
+from api.endpoints.users import create_user, get_me
 
 routes = [
     # users
