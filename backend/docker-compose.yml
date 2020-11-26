@@ -6,4 +6,4 @@ services:
     env_file:
       - .env
     build: .
-    command: /usr/local/poetry/bin/poetry run uvicorn api.app:app --port 8000 --host 0.0.0.0 --env-file .env
+    command: /usr/local/poetry/bin/poetry run uvicorn api.app:app --port 80 --host 0.0.0.0 --env-file .env
