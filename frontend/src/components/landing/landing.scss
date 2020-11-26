@@ -105,3 +105,24 @@
     background-color: $color-quintanary;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__name {
+    font-size: 0.8rem;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 5px;
+  }
+  &__email {
+    font-size: 0.8rem;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+  }
+}
