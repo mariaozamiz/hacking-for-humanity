@@ -19,8 +19,18 @@ function App() {
       setChallenges(data);
     });
     getCovidImpact().then((data) => {
-      console.log('Incidencia acumulada 14 días:', data.ia14d)
-  });
+      if (data.ia14d){
+        console.log('Incidencia acumulada 14 días:', data.ia14d)
+        // Aplicar estilos segun incidencia
+      } else if (data.fatality) {
+        console.log('Tasa de mortalidad:', data.fatality)
+        // Aplicar estilos segun mortalidad
+      }
+    })
+    .catch((error) => {
+      console.error('Error retrieving covid data:', error)
+      // Aplicar estilo por defecto
+    });
   }, []);
 
 
