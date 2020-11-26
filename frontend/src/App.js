@@ -6,9 +6,11 @@ import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
 import airtableApi from './services/airtableClient';
 import Landing from './components/landing/Landing';
 import './app.scss';
+import AcceptedChallenges from './components/acceptedChallenges/AcceptedChallenges';
 
 function App() {
   const [challenges, setChallenges] = useState([]);
+  const [acceptedChallenges, setAcceptedChallenges] = useState([]);
 
   useEffect(() => {
     airtableApi().then((data) => {
@@ -16,13 +18,19 @@ function App() {
     });
   }, []);
 
+
+  const handleAcceptedChallenges = (data) => {
+    setAcceptedChallenges([...data])
+  };
+
+
   const renderChallengeDetail = (props) => {
     const challengeId = props.match.params.id;
     const foundChallenge = challenges.find((challenge) => {
       return challenge.id === challengeId;
     });
     if (foundChallenge !== undefined) {
-      return <ChallengeDetail challenge={foundChallenge} />;
+      return <ChallengeDetail challenge={foundChallenge} handleAcceptedChallenges={handleAcceptedChallenges}/>;
     }
   };
 
@@ -31,10 +39,15 @@ function App() {
       <Route exact path="/">
         <Landing />
       </Route>
-      <Route exact path="/App">
         <Header />
+      <Route exact path="/App">
         <main className="main">
           <ChallengesList challenges={challenges} />
+        </main>
+      </Route>
+      <Route exact path="/AcceptedChallenges">
+        <main className="main">
+          <AcceptedChallenges acceptedChallenges={acceptedChallenges} />
         </main>
       </Route>
       <Switch>
