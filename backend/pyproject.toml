@@ -10,6 +10,7 @@ python = "^3.8"
 airtable-python-wrapper = "^0.15.1"
 uvicorn = "^0.12.3"
 starlette = "^0.14.1"
+python-dotenv = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -7,12 +7,9 @@ from starlette.requests import Request
 from starlette.responses import UJSONResponse
 from starlette.status import HTTP_201_CREATED
 
-from backend.api import (
-    MALFORMED_JSON_MESSAGE,
-    UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE,
-)
-from backend.api.resources import users
-from backend.api.schemas import User
+from api import MALFORMED_JSON_MESSAGE, UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE
+from api.resources import users
+from api.schemas import User
 
 
 async def create_user(request: Request) -> UJSONResponse:

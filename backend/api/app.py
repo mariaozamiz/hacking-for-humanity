@@ -1,11 +1,11 @@
 import uvicorn
 from starlette.applications import Starlette
 
-from backend.api import settings
-from backend.api.event_handlers import on_startup, on_shutdown
-from backend.api.exception_handlers import exception_handlers
-from backend.api.middleware import middleware
-from backend.api.routes import routes
+from api import settings
+from api.event_handlers import on_startup, on_shutdown
+from api.exception_handlers import exception_handlers
+from api.middleware import middleware
+from api.routes import routes
 
 app = Starlette(
     debug=settings.DEBUG,
