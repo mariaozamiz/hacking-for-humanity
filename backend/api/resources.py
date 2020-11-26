@@ -1,6 +1,6 @@
 from airtable import Airtable
 
-from backend.api import settings
+from api import settings
 
 challenges = Airtable(
     str(settings.AIRTABLE_BASE_KEY), "challenges", str(settings.AIRTABLE_API_KEY)
