@@ -39,13 +39,14 @@ function App() {
       <Route exact path="/">
         <Landing />
       </Route>
-        <Header />
       <Route exact path="/App">
+        <Header />
         <main className="main">
           <ChallengesList challenges={challenges} />
         </main>
       </Route>
       <Route exact path="/AcceptedChallenges">
+        <Header />
         <main className="main">
           <AcceptedChallenges acceptedChallenges={acceptedChallenges} />
         </main>
