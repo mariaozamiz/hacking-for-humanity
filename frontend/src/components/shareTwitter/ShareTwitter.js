@@ -9,7 +9,7 @@ const ShareTwitter = () => {
       </p>
       <a
         className="share_twitter-btn"
-        href="http://twitter.com/share?text=Estoy realizando este reto en Fundemic, te apuntas al cambio?&hashtags=fundemicmola,consolemio&user_mentions=GirlsinTechEs"
+        href="http://twitter.com/share?text=Estoy realizando este reto en Fundemic, ✨¿te apuntas al cambio?✨&hashtags=fundemicmola,consolemio&user_mentions=GirlsinTechEs"
         target="_blank"
         rel="noopener noreferrer"
       >
