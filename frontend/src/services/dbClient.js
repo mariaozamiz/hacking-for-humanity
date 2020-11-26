@@ -1,5 +1,5 @@
 const getChallenges = () => {
-    return fetch('https://api.airtable.com/v0/app78rjhFfSaZp3fl/challenges?api_key=keyZ7hg5DA2tYaRqh')
+    return getDataFromApi()
         .then((response) => response.json())
         .then((data) => {
             return data.records.map((record) => {
@@ -13,8 +13,16 @@ const getChallenges = () => {
             })
         })
         .catch((error) => {
-            console.error(error);
+            console.error(error)
         })
-};
+}
 
-export default getChallenges;
+const getDataFromApi = () => {
+    return fetch('http://35.180.227.252/challenges/')
+        .catch((error) => {
+            console.error('Error connecting to API:', error)
+            return fetch('https://api.airtable.com/v0/app78rjhFfSaZp3fl/challenges?api_key=keyZ7hg5DA2tYaRqh')
+        })
+}
+
+export default getChallenges

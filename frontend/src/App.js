@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
 import ChallengesList from './components/challengesList/ChallengesList';
 import ChallengeDetail from './components/challengeDetail/ChallengeDetail';
-import airtableApi from './services/airtableClient';
+import getDataFromApi from './services/dbClient'
 import getCovidImpact from './services/geolocation';
 import Landing from './components/landing/Landing';
 import './app.scss';
@@ -15,7 +15,7 @@ function App() {
   const [acceptedChallenges, setAcceptedChallenges] = useState([]);
 
   useEffect(() => {
-    airtableApi().then((data) => {
+    getDataFromApi().then((data) => {
       setChallenges(data);
     });
     getCovidImpact().then((data) => {
