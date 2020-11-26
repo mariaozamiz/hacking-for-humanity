@@ -5,7 +5,7 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.status import HTTP_201_CREATED
 
-from api import UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE
+from api.constants import UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE
 from api.resources import challenges, users, challenge_subscribers, challenge_completers
 
 VIEW_NAME = "Grid view"
