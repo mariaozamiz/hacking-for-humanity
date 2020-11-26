@@ -12,7 +12,7 @@ const Footer = () => {
             </a>
 
             <div className="copy">
-              <h5>console.mio &copy; 2020 </h5>
+              <small>console.mio &copy; 2020 </small>
             </div>
           </div>
         </section>

@@ -25,22 +25,6 @@ const Landing = (props) => {
         ></img>
 
         <p className="landing__p">FUNDEMIC</p>
-        <form className="form">
-          <input
-            className="form__name"
-            placeholder="Tu nombre es..."
-            type="text"
-            id="name"
-            name="name"
-          />
-          <input
-            className="form__email"
-            placeholder="Dinos un email"
-            type="email"
-            id="email"
-            name="email"
-          />
-        </form>
 
         <Link to="/App" className="landing__btn">
           ¿Te atreves a aceptar el reto?
