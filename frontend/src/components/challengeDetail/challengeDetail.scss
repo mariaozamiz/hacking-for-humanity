@@ -118,6 +118,10 @@
         width: 300px;
         font-size: $l;
       }
+
+      .hidden {
+        display: none;
+      }
     }
 
     .modal__button--accept:hover {

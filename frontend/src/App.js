@@ -31,7 +31,7 @@ function App() {
       return challenge.id === challengeId;
     });
     if (foundChallenge !== undefined) {
-      return <ChallengeDetail challenge={foundChallenge} handleAcceptedChallenges={handleAcceptedChallenges}/>;
+      return <ChallengeDetail challenge={foundChallenge} handleAcceptedChallenges={handleAcceptedChallenges} acceptedChallenges={acceptedChallenges}/>;
     }
   };
 
