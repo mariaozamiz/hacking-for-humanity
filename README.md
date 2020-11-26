@@ -41,6 +41,7 @@ Estamos construyendo una **web App** que ofrece a las personas usuarias retos re
 - HTML y CSS (SASS)
 - React
 - Python
+- DataSet aportado
 
 # Funcionalidades
 
