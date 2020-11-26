@@ -8,31 +8,7 @@
 
 Dedicamos la noche del martes a intercambiar experiencias e impresiones sobre el COVID-19, la "nueva normalidad" y las diferencias entre la situación actual y la de primera ola. ¿Cuánto nos ha tocado personalmente? ¿Y en lo profesional? ¿Cómo ha afectado la pandemia a nuestras familias, barrios, ciudades?
 
-Aunque todes estamos atravesando la pandemia por COVID-19, la experimentamos y vivimos de manera diferente, por lo que las **reacciones psicológicas y experiencias emocionales** son muy distintas. Un estudio reciente del Consejo General de la Psicología de España advierte que el 40% de población española refiere **síntomas de depresión y problemas de ansiedad** vinculados a la crisis sanitaria actual. Algunos de ellos son:
-
-Estrés
-
-Desesperanza
-
-Dolor de cabeza
-
-Desconfianza
-
-Insomnio
-
-Cansancio
-
-Pesadillas
-
-Tensión mandibular
-
-Frustración
-
-Irritabilidad
-
-Llanto espontáneo
-
-Mareos
+Aunque todes estamos atravesando la pandemia por COVID-19, la experimentamos y vivimos de manera diferente, por lo que las **reacciones psicológicas y experiencias emocionales** son muy distintas. Un estudio reciente del Consejo General de la Psicología de España advierte que el 40% de población española refiere **síntomas de depresión y problemas de ansiedad** vinculados a la crisis sanitaria actual.
 
 Estos datos nos parecieron motivo suficiente para crear un proyecto basado en el **bienestar emocional** de la población. Creemos que **no hay impacto pequeño** y que nuestra intervención podría mejorar la vida de las personas afectadas facilitándoles recursos que ya existen de una manera sintétizada, organizada y gamificada. Nuestro bienestar individual, sin duda repercute en la convivencia y esperamos que esta iniciativa aporte su **huella positiva** tanto en lo personal como en el ámbito de lo público.
 
@@ -72,3 +48,5 @@ Web app creado con React y Backend en Python.
 
 Las personas usuarias acceden a la página y encuentran un listado de retos en los que pueden elegir cuáles aceptar.
 Tras aceptarlos, se añaden a su listado de retos y pueden compartir sus avances en Twitter.
+
+Puedes ver nuestra página aquí: https://bit.ly/fundemic
