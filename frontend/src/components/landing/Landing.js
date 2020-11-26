@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './landing.scss';
-// import ImageTitle from '../images/title.png';
+import Logo from '../../assets/icons/face_mask-1.png';
 
 const Landing = () => {
   return (
     <section className="landing">
       <header className="landing__header">
-        <div className="landing__title">
-          {/* <img
-            className="landing__title-img"
-            src={ImageTitle}
-            alt="Rick y Morty"
-          ></img> */}
-        </div>
-        <p className="landing__p">NOMBRE APP</p>
+        <img
+          className="landing__icon"
+          src={Logo}
+          alt="icono de la web chica con mascarilla"
+        ></img>
+
+        <p className="landing__p">FUNDEMIC</p>
+
         <Link to="/App" className="landing__btn">
           ¿Te atreves a aceptar el reto?
         </Link>

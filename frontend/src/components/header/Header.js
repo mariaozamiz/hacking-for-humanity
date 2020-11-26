@@ -11,7 +11,7 @@ function Header() {
           src={faceMask}
           alt="Icono mujer mascarilla"
         ></img>
-        <h1 className="header-title">Retos</h1>
+        <h1 className="header-title">Fundemic</h1>
       </a>
 
       <NavBar />

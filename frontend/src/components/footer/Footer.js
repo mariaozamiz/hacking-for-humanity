@@ -1,20 +1,24 @@
 import React from 'react';
 import './footer.scss';
 
-function Footer() {
-   
-        return ( 
-            <ChallengeCard
-                key={challenge.id}
-                id={challenge.id}
-                type={challenge.type}
-                image={challenge.image}
-                name={challenge.name}
-                description={challenge.description}
-            />     
-        );
-    });
-    return <ul className="challenge-list">{challengesInfo}</ul>;
+const Footer = () => {
+  return (
+    <footer className="page__footer">
+      <div className="footer__wrapper">
+        <section className="footer">
+          <div className="footer__menu">
+            <a href="#home" title="Ir a Inicio">
+              Fundemic
+            </a>
+
+            <div className="copy">
+              <h5>console.mio &copy; 2020 </h5>
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+  );
 };
 
-export default ChallengesList;
+export default Footer;

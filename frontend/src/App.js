@@ -7,11 +7,11 @@ import airtableApi from './services/airtableClient';
 import Landing from './components/landing/Landing';
 import './app.scss';
 import AcceptedChallenges from './components/acceptedChallenges/AcceptedChallenges';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [challenges, setChallenges] = useState([]);
   const [acceptedChallenges, setAcceptedChallenges] = useState([]);
-  
 
   useEffect(() => {
     airtableApi().then((data) => {
@@ -19,19 +19,26 @@ function App() {
     });
   }, []);
 
-
   const handleAcceptedChallenges = (data) => {
-    setAcceptedChallenges([...acceptedChallenges, (challenges.find((challenge) => challenge.id === data))]);
+    setAcceptedChallenges([
+      ...acceptedChallenges,
+      challenges.find((challenge) => challenge.id === data),
+    ]);
   };
 
-  
   const renderChallengeDetail = (props) => {
     const challengeId = props.match.params.id;
     const foundChallenge = challenges.find((challenge) => {
       return challenge.id === challengeId;
     });
     if (foundChallenge !== undefined) {
-      return <ChallengeDetail challenge={foundChallenge} handleAcceptedChallenges={handleAcceptedChallenges} acceptedChallenges={acceptedChallenges}/>;
+      return (
+        <ChallengeDetail
+          challenge={foundChallenge}
+          handleAcceptedChallenges={handleAcceptedChallenges}
+          acceptedChallenges={acceptedChallenges}
+        />
+      );
     }
   };
 
@@ -45,6 +52,7 @@ function App() {
         <main className="main">
           <ChallengesList challenges={challenges} />
         </main>
+        <Footer />
       </Route>
       <Route exact path="/AcceptedChallenges">
         <Header />
