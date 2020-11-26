@@ -9,6 +9,6 @@ routes = [
     Route("/users/me/", get_me, methods=["GET"]),
     # pages
     Route("/challenges/{challenge_id}", subscribe_to_challenge, methods=["POST"]),
-    Route("/challenges/{challenge_id}", complete_challenge, methods=["POST"]),
+    Route("/challenges/{challenge_id}", complete_challenge, methods=["PUT"]),
     Route("/challenges/", get_challenges, methods=["GET"]),
 ]
