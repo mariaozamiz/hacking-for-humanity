@@ -57,3 +57,78 @@
     }
   }
 }
+
+.outdoor {
+  width: 100%;
+  height: 100%;
+  animation: pulse 5s infinite;
+  height: 100vh;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: $color-tertiary;
+  }
+}
+
+.beCareful {
+  width: 100%;
+  height: 100%;
+  animation: pulse 5s infinite;
+  height: 100vh;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: $color-secondary;
+  }
+}
+
+.indoor {
+  width: 100%;
+  height: 100%;
+  animation: pulse 5s infinite;
+  height: 100vh;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: $color-quintanary;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__name {
+    font-size: 0.8rem;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 5px;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__email {
+    font-size: 0.8rem;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
