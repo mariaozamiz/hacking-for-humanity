@@ -11,6 +11,7 @@ import AcceptedChallenges from './components/acceptedChallenges/AcceptedChalleng
 function App() {
   const [challenges, setChallenges] = useState([]);
   const [acceptedChallenges, setAcceptedChallenges] = useState([]);
+  
 
   useEffect(() => {
     airtableApi().then((data) => {
@@ -20,10 +21,10 @@ function App() {
 
 
   const handleAcceptedChallenges = (data) => {
-    setAcceptedChallenges([...acceptedChallenges, data])
+    setAcceptedChallenges([...acceptedChallenges, (challenges.find((challenge) => challenge.id === data))]);
   };
 
-
+  
   const renderChallengeDetail = (props) => {
     const challengeId = props.match.params.id;
     const foundChallenge = challenges.find((challenge) => {

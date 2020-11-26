@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './challengeDetail.scss';
 
 function ChallengeDetail({ challenge, handleAcceptedChallenges }) {
-console.log(handleAcceptedChallenges);
     const handleAccepted = (ev) => {
         handleAcceptedChallenges (ev.target.dataset.id); 
     };
