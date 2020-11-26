@@ -5,7 +5,7 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.status import HTTP_201_CREATED
 
-from api.constants import UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE
+from api.constants import UNSPECIFIED_AUTHORIZATION_HEADER_MESSAGE
 from api.resources import challenges, users, challenge_subscribers, challenge_completers
 
 VIEW_NAME = "Grid view"
@@ -21,7 +21,7 @@ async def subscribe_to_challenge(request: Request) -> JSONResponse:
         token = request.headers["Authorization"]
     except KeyError:
         raise HTTPException(
-            status_code=401, detail=UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE
+            status_code=401, detail=UNSPECIFIED_AUTHORIZATION_HEADER_MESSAGE
         )
     challenge_id = request.path_params["challenge_id"]
     user = users.search("token", token, max_records=1)
@@ -36,7 +36,7 @@ async def complete_challenge(request: Request) -> JSONResponse:
         token = request.headers["Authorization"]
     except KeyError:
         raise HTTPException(
-            status_code=401, detail=UNSPECIFIED_AUTHENTICATION_HEADER_MESSAGE
+            status_code=401, detail=UNSPECIFIED_AUTHORIZATION_HEADER_MESSAGE
         )
     challenge_id = request.path_params["challenge_id"]
     user = users.search("token", token, max_records=1)
