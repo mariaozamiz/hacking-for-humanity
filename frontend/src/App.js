@@ -20,7 +20,7 @@ function App() {
 
 
   const handleAcceptedChallenges = (data) => {
-    setAcceptedChallenges([...data])
+    setAcceptedChallenges([...acceptedChallenges, data])
   };
 
 

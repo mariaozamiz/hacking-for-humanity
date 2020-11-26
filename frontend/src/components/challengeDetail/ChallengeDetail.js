@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './challengeDetail.scss';
 
-function ChallengeDetail({ challenge }) {
-    const saveChallenge = (ev) => {
-        ev.preventDefault();
+function ChallengeDetail({ challenge, handleAcceptedChallenges }) {
+console.log(handleAcceptedChallenges);
+    const handleAccepted = (ev) => {
+        handleAcceptedChallenges (ev.target.dataset.id); 
     };
 
     return (
@@ -25,12 +26,14 @@ function ChallengeDetail({ challenge }) {
                     <p className="modal__description">
                         {challenge.description}
                     </p>
-                    <button
-                        onClick={saveChallenge}
-                        className="modal__button--accept"
-                    >
-                        Acepto el reto
-                    </button>
+                    <Link to="/App">
+                        <button
+                            onClick={handleAccepted}
+                            className="modal__button--accept"
+                            data-id={challenge.id}
+                         >Acepto el reto
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
