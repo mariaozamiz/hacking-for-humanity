@@ -1,0 +1,146 @@
+@import '../../app.scss';
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: #bfbcba;
+  color: white;
+  padding: 5px;
+  font-family: $font-basic;
+}
+
+.button__wrapp {
+  display: flex;
+  align-content: left;
+  text-decoration: none;
+  flex-direction: row-reverse;
+}
+
+.button__close {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: none;
+  margin-top: 12px;
+  text-decoration: none;
+  font-weight: $medium;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  font-size: $m;
+
+  @include tablet {
+    font-size: $xl;
+  }
+}
+
+.wrapper {
+  margin: 0 50px;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  &-image {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 150px;
+    padding: 10px;
+
+    @include tablet {
+      max-width: 250px;
+      margin: 60px auto 0;
+    }
+
+    & img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &-info {
+    font-family: $font-basic;
+    color: white;
+    font-weight: $regular;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal__title {
+    font-family: $font-emphatic;
+    margin-top: 20px;
+    font-weight: $bold;
+    font-size: $xl;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+
+    @include tablet {
+      margin-top: 50px;
+      font-size: 40px;
+    }
+  }
+
+  .modal__description {
+    margin-top: 20px;
+    font-size: $s;
+    font-weight: $regular;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include tablet {
+      font-size: $xl;
+      margin-bottom: 70px;
+    }
+  }
+
+  .btn__container {
+    text-align: center;
+    .modal__button--accept {
+      display: inline-block;
+      padding: 0.5em 3em;
+      border: 1px solid #ffffff;
+      margin: auto;
+      width: 200px;
+      box-sizing: border-box;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $font-basic;
+      font-size: $xs;
+      font-weight: $regular;
+      color: #ffffff;
+      text-align: center;
+      background-color: transparent;
+
+      @include tablet {
+        width: 300px;
+        font-size: $l;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+
+    .modal__button--accept:hover {
+      color: #dddddd;
+      border-color: #dddddd;
+    }
+
+    .modal__button--accept:active {
+      color: #bbbbbb;
+      border-color: #bbbbbb;
+    }
+  }
+}
+.auto-care {
+  background-color: $color-quintanary;
+}
+.social {
+  background-color: $color-secondary;
+}
+.home {
+  background-color: $color-cuaternary;
+}
