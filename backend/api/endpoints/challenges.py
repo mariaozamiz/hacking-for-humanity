@@ -53,7 +53,7 @@ async def complete_challenge(request: Request) -> JSONResponse:
         completion_data = {
             "user_id": user["fields"]["id"],
             "challenge_id": challenge_id,
-            "completed_at": datetime.now(),
+            "completed_at": str(datetime.now()),
         }
         challenge_completers.insert(completion_data)
         return JSONResponse(completion_data, status_code=HTTP_201_CREATED)
