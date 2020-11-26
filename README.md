@@ -50,3 +50,5 @@ Las personas usuarias acceden a la página y encuentran un listado de retos en l
 Tras aceptarlos, se añaden a su listado de retos y pueden compartir sus avances en Twitter.
 
 Puedes ver nuestra página aquí: https://bit.ly/fundemic
+
+![Demo de Fundemic](./frontend/src/assets/images/video_fundemic_twitterb.gif)
